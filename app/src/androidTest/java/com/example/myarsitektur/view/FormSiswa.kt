@@ -81,6 +81,13 @@ fun FormSiswa(
                     }
                 }
             }
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(all = 5.dp)
+                    .width(width = 250.dp),
+                thickness = dimensionResource(id = 1),
+                color = Color.Blue
+            )
 
         }
     }
