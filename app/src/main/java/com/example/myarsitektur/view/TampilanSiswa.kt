@@ -1,6 +1,9 @@
 package com.example.myarsitektur.view
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
+import com.example.myarsitektur.R
+import com.example.myarsitektur.model.Siswa
 
 @Composable
 fun TampilSiswa(
@@ -9,8 +12,8 @@ fun TampilSiswa(
     onBackButtonClicked: () -> Unit
 ){
     val items = listOf(
-        Pair(stringResource(R.string.nama_lengkap), statusUISiswa.nama),
-        Pair(stringResource(R.string.jenis_kelamin), statusUISiswa.gender),
-        Pair(stringResource(R.string.alamat), statusUISiswa.alamat)
+        Pair(stringResource("Nama Lengkap"), statusUISiswa.nama),
+        Pair(stringResource(id = "Jenis Kelamin"), statusUISiswa.gender),
+        Pair(stringResource("Alamat"), statusUISiswa.alamat)
     )
 }
