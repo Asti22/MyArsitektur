@@ -1,4 +1,4 @@
-package com.example.myarsitektur.view.uicontroller
+package com.example.myarsitektur.view
 
 import com.example.myarsitektur.R
 import androidx.compose.foundation.layout.*
