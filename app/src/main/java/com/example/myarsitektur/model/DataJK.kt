@@ -1,4 +1,5 @@
 package com.example.myarsitektur.model
+
 import com.example.myarsitektur.R
 
 object DataJK {
