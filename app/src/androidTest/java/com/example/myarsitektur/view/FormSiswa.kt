@@ -1,7 +1,11 @@
 package com.example.myarsitektur.view.uicontroller
 
 import android.R
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -15,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 
 @Composable
 fun FormSiswa(
@@ -38,7 +43,26 @@ fun FormSiswa(
             verticalArrangement = Arragement.SpaceBetween,
             horizontalAligment = Alignment.CenterHorizontally
         ){
-            OutlinedTextField()
+            OutlinedTextField(
+                value = txtNama,
+                singleLine = true,
+                shape = MaterialTheme.shapes.medium,
+                modifier = Modifier.width(width = 250.dp).padding(top = 20.dp),
+                label = {Text(text = "Nama Lengkap")},
+                onValueChange = {
+                    txtNama = it
+                }
+            )
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(all = 12.dp)
+                    .width(width = 250.dp)
+                thickness = dimensionResource(1dp),
+                color = Color.Blue
+            )
+            Row {
+
+            }
         }
     }
 }
