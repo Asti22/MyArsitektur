@@ -26,6 +26,24 @@ fun TampilSiswa(
                 title = { Text(text = stringResource(R.string.data_siswa), color = colorResource(R.color.white)) },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(backgroundColor = colorResource(id = R.color.purple_500)),
             )
-        })
+        }) { isRuang ->
+        Column(
+            modifier = Modifier.padding(paddingValues = isRuang),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column(
+                modifier = Modifier.padding(dimensionResource(R.dimen.d8dp)),
+                verticalArrangement = Arrangement.spacedBy(space = dimensionResource(R.dimen.d8dp))
+            ) {
+                items.forEach { item ->
+                    Column {
+                        Text(text = item.first.uppercase(), fontSize = 16.sp)
+                        Text(text = item.second, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    }
+                    Divider(thickness = dimensionResource(R.dimen.d1dp))
+                }
+            }
+
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.d16dp)))
 
 }
